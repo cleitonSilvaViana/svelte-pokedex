@@ -1,55 +1,72 @@
 <script>
-    const { pokemon } = $props()
+	// signals 
+	import { pokemon as pokemonSignal } from "$signals/Pokemon.svelte";
+
+	const { pokemon } = $props();
+	const id = () => {
+		// transformar em array
+		// remover o último (/) caractere do array
+		// identificar a última barra do array
+		// a partir da última BigInt64Array, resgatar todos os itens (respectivos id's)
+		// retornar o id 
+	}
+
+	async function selectPokemon() {
+		await fetch(pokemon.url)
+			.then((res) => res.json())
+			.then(res => pokemonSignal.select = res)
+			// .then(res => console.log(res.sprites.other.dream_world.front_default))
+			// .then(res => console.log(pokemonSignal.selected.sprites.other.dream_world.front_default))
+	}
+
+
 
 </script>
 
-<article>
-    <h2>Bulbassaur</h2>
-    <div>
-        <ul>
-            <li>fire</li>
-            <li>Water</li>
-        </ul>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="...">
-    </div>
-</article>
+<button onclick="{selectPokemon}">
+	<div>
+		<img
+			src="{`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id[1]}.svg`}"
+			alt="..."
+		/>
+	</div>
+    <h2>{pokemon.name}</h2>
+</button>
 
 <style>
-    article {
-        width: 100%;
-        border-radius: .8rem;
-        background-color: aquamarine;
-        padding: 1.6rem .8rem .8rem;
-    }
-
-    h2 {
-        color: #333;
-        font-size: 2rem;
-    }
-
-    div {
-        display: flex;
+	button {
+		cursor: pointer;
+		width: 100%;
+        height: 140px;
+		border-radius: 0.8rem;
+		background-color: aquamarine;
+		padding: 1.6rem 0.8rem 0.8rem;
+        
+		display: flex;
         justify-content: space-between;
-        gap: .8rem;
-    }
+        align-items: center;
+		flex-direction: column;
+	}
 
-    ul {
-        display: inline-block;
-    }
+	h2 {
+		color: #333;
+		font-size: 2rem;
+	}
 
-    li {
-        padding: .8rem 1.6rem;
-        border-radius: .8rem;
-        background-color: aqua;
-        width: fit-content;
-        margin: .8rem 0;
-        font-size: 1.4rem;
-        text-transform: capitalize;
-    }
+	div {
+		display: flex;
+		justify-content: center;
+        align-items: center;
+		gap: 0.8rem;
+        width: 100%;
+        height: 100%;
+	}
 
-    img {
-        display: inline-block;
-        width: 50%;
-        max-width: 116px;
-    }
+	img {
+		display: inline-block;
+        max-width: 80px;
+        max-height: 80px;
+		max-width: 116px;
+        object-fit: cover;
+	}
 </style>

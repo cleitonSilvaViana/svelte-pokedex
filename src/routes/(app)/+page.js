@@ -1,10 +1,12 @@
-export async function load({ fetch }) {
 
-    let res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
+export async function load({fetch}) {
+    const id = Math.floor(Math.random() * 1292)
+
+    let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     res = await res.json()
-
-	return {
-        res,
-		pokemons: res.results
-	}
+    
+    return {
+        name: await res.name,
+        image: await res.sprites.other['official-artwork'].front_default
+    }
 }

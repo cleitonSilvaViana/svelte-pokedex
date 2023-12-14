@@ -8,5 +8,15 @@
 </script>
 
 <Header />
-<slot />
+
+<main class="container">
+    <slot />
+</main>
+
 <Footer />
+
+<style>
+    main {
+        min-height: calc(100vh - 88px);
+    }
+</style>
