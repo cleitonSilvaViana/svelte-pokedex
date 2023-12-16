@@ -1,0 +1,115 @@
+:root {
+    --normal: #A8A77A;
+	--fire: #EE8130;
+	--water: #6390F0;
+	--electric: #F7D02C;
+	--grass: #7AC74C;
+	--ice: #96D9D6;
+	--fighting: #C22E28;
+	--poison: #A33EA1;
+	--ground: #E2BF65;
+	--flying: #A98FF3;
+	--psychic: #F95587;
+	--bug: #A6B91A;
+	--rock: #B6A136;
+	--ghost: #735797;
+	--dragon: #6F35FC;
+	--dark: #705746;
+	--steel: #B7B7CE;
+	--fairy: #D685AD;
+}
+
+.bg-normal {
+    background-color: var(--normal);
+    color: #222;
+}
+
+.bg-fire {
+    background-color: var(--fire);
+    color: #333;
+}
+
+.bg-water {
+    color: #333;
+    background-color: var(--water);
+}
+
+.bg-electric {
+    color: #333;
+    background-color: var(--electric);
+}
+
+.bg-grass {
+    color: #333;
+    background-color: var(--grass);
+}
+
+.bg-ice {
+    color: #333;
+    background-color: var(--ice);
+}
+
+.bg-fighting {
+    color: #333;
+    background-color: var(--fighting);
+}
+
+.bg-poison {
+    background-color: var(--poison);
+    color: #eee;
+}
+
+.bg-ground {
+    color: #333;
+    background-color: var(--ground);
+}
+
+.bg-flying {
+    color: #333;
+    background-color: var(--flying);
+}
+
+.bg-psychic {
+    color: #333;
+    background-color: var(--psychic);
+}
+
+.bg-bug {
+    color: #333;
+    background-color: var(--bug);
+}
+
+.bg-rock {
+    color: #333;
+    background-color: var(--rock);
+}
+
+.bg-ghost {
+    color: #333;
+    background-color: var(--ghost);
+}
+
+.bg-dragon {
+    color: #333;
+    background-color: var(--dragon);
+}
+
+.bg-dark {
+    color: #333;
+    background-color: var(--dark);
+}
+
+.bg-steel {
+    color: #333;
+    background-color: var(--steel);
+}
+
+.bg-fairy {
+    color: #333;
+    background-color: var(--fairy);
+}
+
+
+.bg-opacity-3 {
+    background-color: #3333332d;
+}

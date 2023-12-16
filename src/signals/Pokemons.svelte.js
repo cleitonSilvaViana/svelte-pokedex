@@ -1,5 +1,7 @@
 //@ts-nocheck 
 export class Pokemons {
+    selected = $state(null) // pokemon selecionado
+
     list = $state([]) // lista de pokemons
     searched = $state([]) // lista contendo os pokemons encontrados na pesquisa
     input = $state('') // item com os dados do input de pesquisa
@@ -27,19 +29,15 @@ export class Pokemons {
     }
 
     set add(pokemons) {
-        console.log(this.list)
-
           // verificando se a lista está vazia
          if (this.list.length === 0) {
              this.list.push(...pokemons)
          } else {
              //verificando se o último elemento da lista possuí o mesmo nome do último elemento do array de pokemons que vou inserir
-             console.log('aqui')
              if (this.list[this.list.length - 1].name !== pokemons[pokemons.length - 1].name) {
                  this.list.push(...pokemons)
              }
          }
-  
              this.rescue
              this.load
     }
@@ -55,6 +53,11 @@ export class Pokemons {
         this.searched = [...flag]
 
         return
+    }
+
+    set select(id) {
+        const indice = this.list.findIndex(el => el.id === id)
+        this.selected = Object.assign({}, this.list[indice])
     }
 
 }

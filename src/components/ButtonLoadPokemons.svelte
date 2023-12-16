@@ -2,15 +2,16 @@
 	// signals
 	import { pokemons } from '$signals/Pokemons.svelte';
 
-	async function load() {
-		let res = await fetch(pokemons.url);
-		res = await res.json();
-		pokemons.add = await res.results;
-		pokemons.url = await res.next;
-	}
+	// function 
+	import loadData from '../functions/loadDatas';
+
+	// implementar a lógica que será aplicada sempre que o botão for clicado
+	// desabilitar o botão
+	// mudar mensagem do botão enquanto carrega os pokemons
+
 </script>
 
-<button onclick={load}>Load More pokemons</button>
+<button onclick={() => loadData()}>Load More pokemons</button>
 
 <style>
     
