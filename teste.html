@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider {
+            width: 320px;
+            height: 300px;
+            overflow: hidden;
+            border: 1px solid gray;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: yellow;
+            padding: 8px;
+        }
+
+
+        .nav input {
+            display: none;
+        }
+
+
+        
+
+        .slides {
+            width: 400%;
+            height: 100%;
+            position: relative;
+
+            display: grid;
+            grid-template-columns: repeat(4, 320px);
+        }
+
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            transition: all ease-in-out 1s;
+        }
+
+        .slide--1 {
+            background-color: aquamarine;
+        }
+
+        .slide--2 {
+            background-color: bisque;
+        }
+
+        .slide--3 {
+            background-color: burlywood;
+        }
+
+        .slide--4 {
+            background-color: yellow;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="nav">
+            <label for="slide1">slide 1</label>
+            <input type="radio" name="option" id="slide1" checked>
+
+            <label for="slide3">slide 2</label>
+            <input type="radio" name="option" id="slide2">
+
+            <label for="slide3">slide 3</label>
+            <input type="radio" name="option" id="slide3">
+
+            <label for="slide4">slide 4</label>
+            <input type="radio" name="option" id="slide4">
+        </div>
+
+        <div class="slides">
+            <div class="slide first slide--1"></div>
+            <div class="slide slide--2"></div>
+            <div class="slide slide--3"></div>
+            <div class="slide slide--4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

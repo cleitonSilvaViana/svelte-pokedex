@@ -10,11 +10,11 @@
 	import Card from '$components/PokemonCard.svelte';
 	import Button from '$components/ButtonLoadPokemons.svelte';
 	import Input from '$components/InputSearchPokemon.svelte';
+
 </script>
 
 <div class="main">
-	<section>
-		<!-- <section class={pokemons.selected ? `bg-${pokemons.selected.types[0].type.name}` : ''}> -->
+	<section class={pokemons.selected ? `bg-${pokemons.selected.types[0].type.name}` : ''}>
 		{#if pokemons.selected}
 			<div class="pokemon">
 				<h1 class="pokemon__name">{pokemons.selected.name}</h1>
@@ -34,9 +34,14 @@
 					alt="{pokemons.selected.name} image"
 				/>
 
-				<div class="pokemon__details">
-					
-					
+				<div class="pokemon__slider">
+					<table>
+						<tbody>
+							<tr>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		{:else}
@@ -55,6 +60,8 @@
 </div>
 
 <style>
+
+
 	.main {
 		height: calc(100dvh - 88px);
 		display: grid;
@@ -116,7 +123,7 @@
 		background-color: #ddd;
 	}
 
-	.pokemon__details {
+	.pokemon__slider {
 		background-color: #aaa;
 		height: 100%;
 		width: 100%;
