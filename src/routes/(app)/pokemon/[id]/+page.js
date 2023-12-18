@@ -44,7 +44,7 @@ export async function load({ fetch, params }) {
     }  
     
     const loadingPokemonDatas = speciesList.map(specie => fetchData(`https://pokeapi.co/api/v2/pokemon/${specie.name}`))
-    const evolutions = Promise.all(loadingPokemonDatas).then(results => console.log('results: ',results))
+    const evolutions = Promise.all(loadingPokemonDatas).then(results => results)
 
     return {
         pokemon: await res,

@@ -1,161 +1,68 @@
 <script>
+    // components
+    import Header from '$components/Header.svelte';
+
 	const { data } = $props();
-	const { image, name } = data;
+	const { pokemon } = data;
 </script>
 
-<article>
-	<div>
-		<h1>What are you looking for?</h1>
+<Header />
+<main class="container">
+	<section class="links">
+        <a href="" class="bg-water">
+            <strong>Pokemons</strong>
+        </a>
 
-		<search>
-			<input type="text" placeholder="search pokemons, itens, etc." />
-		</search>
+        <a href="" class="bg-fire">
+            <strong>Moves</strong>
+        </a>
 
-		<section>
-			<button>
-				<a href="/pokemons">
-					<h3>Pokémons</h3>
-				</a>
-			</button>
-			<button>
-				<h3>Items</h3>
-			</button>
-			<button>
-				<h3>Moves</h3>
-			</button>
-			<button>
-				<h3>Types</h3>
-			</button>
-			<button>
-				<h3>Favorite</h3>
-			</button>
-		</section>
-	</div>
+        <a href="" class="bg-ghost">
+            <strong>Abilities</strong>
+        </a>
 
-	<div class="pokemon">
-		<img src={image} alt="{`${name} image`}" />
-	</div>
-</article>
+        <a href="" class="bg-grass">
+            <strong>Locations</strong>
+        </a>
+
+        <a href="" class="bg-poison">
+            <strong>Type charts</strong>
+        </a>
+    </section>
+	<section>
+        <a href="{`/pokemon/${pokemon.id}`}">
+            <img src="{pokemon.sprites.other['official-artwork'].front_default}" alt="{`${pokemon.name} image`}">
+        </a>
+    </section>
+</main>
 
 <style>
-	article {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
-		gap: 1.6rem;
-	}
+    main {
+        height: calc(100dvh - 48px);
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
 
-	div {
-		display: inline-block;
-		width: 100%;
-		height: 100%;
+    section {
+        width: 100%;
+    }
 
-		display: grid;
-		gap: 1.6rem;
-	}
+    img {
+        width: 100%;
+    }
 
-	h1 {
-		padding: 3.2rem 0 1.6rem;
-		font-size: 3.2rem;
-		color: #eee;
-	}
+    .links a {
+        display: block;
+        padding: 16px 32px;
+        text-align: right;
+        margin: 16px 0;
+        border-radius: 16px;
+    }
 
-	input {
-		width: 100%;
-		border-radius: 0.4rem;
-		padding: 0.8rem;
-	}
+    strong {
+        font-size: 1.6rem;
+    }
 
-	section {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1.6rem;
-
-		grid-template-areas:
-			'a a'
-			'b c'
-			'd e';
-	}
-
-	button {
-		cursor: pointer;
-		border-radius: 0.4rem;
-		height: 96px;
-		position: relative;
-	}
-
-	button a {
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
-
-	h3 {
-		font-size: 3.2rem;
-		color: #ddd;
-		text-shadow: 1px 1px 1px 3px #fff;
-		font-weight: 700;
-		position: absolute;
-		bottom: 0.8rem;
-		left: 1.2rem;
-	}
-
-	section button:first-child {
-		background-color: #5dbe62;
-		grid-area: a;
-	}
-
-	section button:nth-child(2) {
-		grid-area: b;
-		background-color: #f7786b;
-	}
-
-	section button:nth-child(3) {
-		grid-area: c;
-		background-color: #58aaf6;
-	}
-
-	section button:nth-child(4) {
-		grid-area: d;
-		background-color: #ffce4b;
-	}
-
-	section button:last-child {
-		grid-area: e;
-		background-color: #b863cf;
-	}
-
-	.pokemon {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.pokemon > img {
-		width: 100%;
-	}
-
-	@media screen and (max-width: 799px) {
-		h3 {
-			font-size: 2.8rem;
-		}
-	}
-
-	@media screen and (max-width: 430px) {
-		h3 {
-			font-size: 2.4rem;
-		}
-
-		section {
-			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-		}
-
-		.pokemon {
-			position: absolute;
-			z-index: -1;
-			top: -25%;
-			opacity: 0.3;
-		}
-	}
 </style>

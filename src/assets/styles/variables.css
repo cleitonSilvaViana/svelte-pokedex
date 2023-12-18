@@ -1,47 +1,219 @@
 :root {
-    --normal: #A8A77A;
-	--fire: #EE8130;
-	--water: #6390F0;
-	--electric: #F7D02C;
-	--grass: #7AC74C;
-	--ice: #96D9D6;
-	--fighting: #C22E28;
-	--poison: #A33EA1;
-	--ground: #E2BF65;
-	--flying: #A98FF3;
-	--psychic: #F95587;
-	--bug: #A6B91A;
-	--rock: #B6A136;
-	--ghost: #735797;
-	--dragon: #6F35FC;
-	--dark: #705746;
-	--steel: #B7B7CE;
-	--fairy: #D685AD;
+
+
+    --normal--soft: #c5c5be;
+    --normal: #B8B9AB;
+    --normal--intense: #acad9c;
+    --normal--dark: #382d2d;
+
+    --fire--soft: #fc8181;
+    --fire: #FB6C6C;
+    --fire--instense: #ff4a4a;
+    --fire--dark: #453131;
+
+    --grass--soft: #65e4c6;
+    --grass: #48D0B0;
+    --grass--instense: #22e3b6;
+    --grass--dark: #314540;
+
+    --water--soft: #8bc7ff;
+    --water: #76BDFE;
+    --water--intense: #5faffa;
+    --water--dark: #313d45;
+
+    --bug--soft: #cbdf37;
+    --bug: #c0d428;
+    --bug--intense: #b5c91c;
+    --bug--dark: #314532;
+
+    --poison--soft: #f16cef;
+    --poison: #ed57eb;
+    --poison--intense: #e748e5;
+    --poison--dark: #453142;
+
+    --electric--soft: #fddb7e;
+    --electric: #FFD86F;
+    --electric--intense: #ffcf4e;
+    --electric--dark: #454231;
+
+    --ground--soft: #e7c878;
+    --ground: #E2BF65;
+    --ground--intense: #d5af4c;
+    --ground--dark: #454031;
+
+    --fighting--soft: #e48e7d;
+    --fighting: #d87c6a;
+    --fighting--intense: #cf6b57;
+    --fighting--dark: #453c31;
+
+    --fairy--soft: #e49ec1;
+    --fairy: #D685AD;
+    --fairy--intense: #cf73a1;
+    --fairy--dark: #433145;
+
+    --ice--soft: #ade4e1;
+    --ice: #96D9D6;
+    --ice--intense: #7fccc8;
+    --ice--dark: #314544;
+
+    --flying--soft: #b9a1fa;
+    --flying: #A98FF3;
+    --flying--intense: #9a7cee;
+    --flying--dark: #1a0b46;
+
+    --psychic--soft: #f891b0;
+    --psychic: #f77ea3;
+    --psychic--intense: #e9638b;
+    --psychic--dark: #300512;
+
+    --rock--soft: #d8c45e;
+    --rock: #ceb84c;
+    --rock--intense: #c4ac39;
+    --rock--dark: #2e2705;
+
+    --ghost--soft: #836aa5;
+    --ghost: #735797;
+    --ghost--intense: #63468a;
+    --ghost--dark: #120425;
+
+    --dragon--soft: #a17cfd;
+    --dragon: #9063ff;
+    --dragon--intense: #5d24ec;
+    --dragon--dark: #100430;
+
+    --dark--soft: #836a59;
+    --dark: #705746;
+    --dark--intense: #694c39;
+    --dark--dark: #2e1505;
+
+    --steel--soft: #cfcfdb;
+    --steel: #B7B7CE;
+    --steel--intense: #9e9ec0;
+    --steel--dark: #9ergb(4, 4, 37)
+  
 }
 
-.bg-normal {
-    background-color: var(--normal);
-    color: #222;
+/* whater font color */
+
+.bg-grass, .bg-grass *,
+.bg-grass--intense, .bg-grass--intense *,
+.bg-fire, .bg-fire *,
+.bg-fire--intense, .bg-fire--intense *,
+.bg-water, .bg-water *,
+.bg-water--intense, .bg-water--intense *,
+.bg-bug, .bg-bug *,
+.bg-bug--intense, .bg-bug--intense *,
+.bg-normal, .bg-normal *,
+.bg-normal--intense, .bg-normal--intense *,
+.bg-poison, .bg-poison *,
+.bg-poison--intense, .bg-poison--intense *,
+.bg-electric, .bg-electric *,
+.bg-electric--intense, .bg-electric--intense *,
+.bg-ground, .bg-ground *,
+.bg-ground--intense, .bg-ground--intense *,
+.bg-fighting, .bg-fighting *,
+.bg-fighting--intense, .bg-fighting--intense *,
+.bg-fairy, .bg-fairy *,
+.bg-fairy--intense, .bg-fairy--intense *,
+.bg-ice, .bg-ice *,
+.bg-ice--intense, .bg-ice--intense *,
+.bg-flying, .bg-flying *,
+.bg-flying--intense, .bg-flying--intense *,
+.bg-psychic, .bg-psychic *,
+.bg-psychic--intense, .bg-psychic--intense *,
+.bg-rock, .bg-rock *,
+.bg-rock--intense, .bg-rock--intense *,
+.bg-ghost, .bg-ghost *, 
+.bg-ghost--intense, .bg-ghost--intense *, 
+.bg-dragon, .bg-dragon *,
+.bg-dragon--intense, .bg-dragon--intense *,
+.bg-dark, .bg-dark *,
+.bg-dark--intense, .bg-dark--intense *,
+.bg-steel, .bg-steel *,
+.bg-steel--intense, .bg-steel--intense *
+{
+    color: #fff;
+}
+
+
+.bg-grass {
+    background-color: var(--grass);
+}
+
+.bg-grass--intense {
+    background-color: var(--grass--instense);
 }
 
 .bg-fire {
     background-color: var(--fire);
-    color: #333;
+}
+
+.bg-fire--intense {
+    background-color: var(--fire-instense);
 }
 
 .bg-water {
-    color: #333;
     background-color: var(--water);
 }
 
+.bg-water--intense {
+    background-color: var(--water--intense);
+}
+
+
+.bg-bug {
+    background-color: var(--bug);
+}
+
+.bg-bug--intense {
+    background-color: var(--bug--intense);
+}
+
+.bg-normal {
+    background-color: var(--normal);
+}
+
+.bg-normal--intense {
+    background-color: var(--normal--intense);
+}
+
+.bg-poison {
+    background-color: var(--poison);
+}
+
+.bg-poison--intense {
+    background-color: var(--poison--intense);
+}
+
 .bg-electric {
-    color: #333;
     background-color: var(--electric);
 }
 
-.bg-grass {
-    color: #333;
-    background-color: var(--grass);
+.bg-electric--intense {
+    background-color: var(--electric--intense);
+}
+
+.bg-ground {
+    background-color: var(--ground);
+}
+.bg-ground--intense {
+    background-color: var(--ground--intense);
+}
+
+.bg-fighting {
+    background-color: var(--fighting);
+}
+
+.bg-fighting--intense {
+    background-color: var(--fighting--intense);
+}
+
+.bg-fairy {
+    background-color: var(--fairy);
+}
+
+.bg-fairy--intense {
+    background-color: var(--fairy--intense);
 }
 
 .bg-ice {
@@ -49,19 +221,8 @@
     background-color: var(--ice);
 }
 
-.bg-fighting {
-    color: #333;
-    background-color: var(--fighting);
-}
-
-.bg-poison {
-    background-color: var(--poison);
-    color: #eee;
-}
-
-.bg-ground {
-    color: #333;
-    background-color: var(--ground);
+.bg-ice--intense {
+    background-color: var(--ice--intense);
 }
 
 .bg-flying {
@@ -69,46 +230,60 @@
     background-color: var(--flying);
 }
 
+.bg-flying--intense {
+    background-color: var(--flying--intense);
+}
+
 .bg-psychic {
     color: #333;
     background-color: var(--psychic);
 }
 
-.bg-bug {
-    color: #333;
-    background-color: var(--bug);
+.bg-psychic--intense {
+    background-color: var(--psychic--intense);
 }
 
 .bg-rock {
-    color: #333;
     background-color: var(--rock);
 }
 
+.bg-rock--intense {
+    background-color: var(--rock--intense);
+}
+
 .bg-ghost {
-    color: #333;
     background-color: var(--ghost);
 }
 
+.bg-ghost--intense {
+    background-color: var(--ghost--intense);
+}
+
 .bg-dragon {
-    color: #333;
     background-color: var(--dragon);
 }
 
+.bg-dragon--intense {
+    background-color: var(--dragon--intense);
+}
+
 .bg-dark {
-    color: #333;
     background-color: var(--dark);
 }
+
+.bg-dark--intense {
+    background-color: var(--dark--intense);
+}
+
 
 .bg-steel {
     color: #333;
     background-color: var(--steel);
 }
 
-.bg-fairy {
-    color: #333;
-    background-color: var(--fairy);
+.bg-steel--intense {
+    background-color: var(--steel--intense);
 }
-
 
 .bg-opacity-3 {
     background-color: #3333332d;
