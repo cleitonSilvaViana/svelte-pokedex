@@ -9,7 +9,7 @@
 <Header />
 <main class="container">
 	<section class="links">
-        <a href="" class="bg-water">
+        <a href="/pokemons" class="bg-water">
             <strong>Pokemons</strong>
         </a>
 

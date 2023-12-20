@@ -32,7 +32,7 @@
     }
 
     .active-route {
-        color: var(--grass);
+        color: var(--fire);
     }
 
     a {
@@ -48,4 +48,5 @@
     a:active {
         color: var(--poison);
     }
+
 </style>

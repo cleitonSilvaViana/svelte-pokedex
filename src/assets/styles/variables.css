@@ -8,12 +8,12 @@
 
     --fire--soft: #fc8181;
     --fire: #FB6C6C;
-    --fire--instense: #ff4a4a;
+    --fire--intense: #ff4a4a;
     --fire--dark: #453131;
 
     --grass--soft: #65e4c6;
     --grass: #48D0B0;
-    --grass--instense: #22e3b6;
+    --grass--intense: #22e3b6;
     --grass--dark: #314540;
 
     --water--soft: #8bc7ff;
@@ -141,7 +141,7 @@
 }
 
 .bg-grass--intense {
-    background-color: var(--grass--instense);
+    background-color: var(--grass--intense);
 }
 
 .bg-fire {
@@ -149,7 +149,7 @@
 }
 
 .bg-fire--intense {
-    background-color: var(--fire-instense);
+    background-color: var(--fire--intense);
 }
 
 .bg-water {

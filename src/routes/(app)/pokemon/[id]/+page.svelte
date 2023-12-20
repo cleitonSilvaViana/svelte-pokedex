@@ -14,6 +14,8 @@
 		}
 	};
 
+
+
 	const type = pokemon.types[0].type.name;
 </script>
 
@@ -26,14 +28,18 @@
 
 				<strong class="pokemon__id">#{pokemon.id}</strong>
 
+				<p>{specie.flavor_text_entries[0].flavor_text}</p>
+
 				<ul class="pokemon__types">
 					{#each pokemon.types as i}
 						<li class={`bg-${i.type.name}--intense`}>{i.type.name}</li>
 					{/each}
 				</ul>
+			</section>
 
+			<section class="pokemon__info">
 				<details>
-					<summary>Features</summary>
+					<summary>Infos</summary>
 					<table>
 						<tbody>
 							<tr>
@@ -57,9 +63,7 @@
 						</tbody>
 					</table>
 				</details>
-			</section>
 
-			<section class="pokemons__stats">
 				<details>
 					<summary>Stats</summary>
 					<table>
@@ -80,10 +84,9 @@
 						</tbody>
 					</table>
 				</details>
-			</section>
 
-			<section class="pokemon__evolutions">
-				<details>
+		
+				<details class="pokemon__evolutions">
 					<summary>Evolution</summary>
 					<div>
 						{#each evolutions as evolution}
@@ -111,7 +114,9 @@
 					</div>
 				</details>
 			</section>
+		
 		</div>
+
 		<div class="pokemon__img__container">
 			<img class="pokemon__img" src={pokemonImage()} alt="{pokemon.name} image" />
 		</div>
@@ -173,6 +178,12 @@
 		text-transform: capitalize;
 		font-weight: bold;
 		margin-bottom: 24px;
+	}
+
+	p {
+		font-size: 1.6rem;
+		color: #fff;
+		margin-bottom: 16px;
 	}
 
 	.pokemon__id {
@@ -277,9 +288,13 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		width: fit-content;
+
+		margin: 0 auto;
 	}
 
 	.pokemon__img {
 		width: 100%;
+		align-self: center;
 	}
+
 </style>

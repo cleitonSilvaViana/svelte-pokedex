@@ -1,13 +1,18 @@
 <script>
 	// signals 
 	import { pokemons } from "$signals/Pokemons.svelte";
-	let { pokemon } = $props();
+	let { pokemon, isVisible } = $props();
 
 	// necessário realziar uma cópia do objeto para que não seja realizado um binding ao selecionarmos o pokemon e por ventura, alterar a sua propriedade type
 	const poke = Object.assign({}, pokemon)
+
+	function clicked() {
+		pokemons.select = poke.id
+		isVisible()
+	}
 </script>
 
-<button class={`bg-${poke.types[0].type.name}`} onclick={() => (pokemons.select = poke.id)}>
+<button class={`bg-${poke.types[0].type.name}`} onclick={() => clicked()}>
 	<div>
 		<img src={poke.sprites.other.dream_world.front_default} alt="{poke.name} image" />
 	</div>
